@@ -112,15 +112,15 @@ F 3 "~" H 9300 3550 50  0001 C CNN
 	1    9300 3550
 	1    0    0    -1  
 $EndComp
-Text GLabel 8800 3350 0    50   Input ~ 0
-SW
-Text GLabel 8800 3450 0    50   Input ~ 0
-PAD_L
-Text GLabel 8800 3550 0    50   Input ~ 0
-PAD_R
-Text GLabel 8800 3750 0    50   Input ~ 0
-KEY
 Text GLabel 8800 3650 0    50   Input ~ 0
+SW
+Text GLabel 8800 3350 0    50   Input ~ 0
+PAD_L
+Text GLabel 8800 3450 0    50   Input ~ 0
+PAD_R
+Text GLabel 8800 3550 0    50   Input ~ 0
+KEY
+Text GLabel 8800 3750 0    50   Input ~ 0
 TONE
 Wire Wire Line
 	8800 3350 9100 3350
