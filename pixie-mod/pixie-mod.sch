@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:pixie-mod-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -84,7 +83,7 @@ L Device:R R4
 U 1 1 5D21C407
 P 2400 2550
 F 0 "R4" H 2470 2596 50  0000 L CNN
-F 1 "220" H 2470 2505 50  0000 L CNN
+F 1 "470" H 2470 2505 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2330 2550 50  0001 C CNN
 F 3 "~" H 2400 2550 50  0001 C CNN
 	1    2400 2550
@@ -146,7 +145,7 @@ U 1 1 5D220906
 P 1200 2050
 F 0 "C2" H 1315 2096 50  0000 L CNN
 F 1 "50" H 1315 2005 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_Tantal_D5.0mm_P5.00mm" H 1200 2050 50  0001 C CNN
+F 2 "trimmer-caps:TZ03-F" H 1200 2050 50  0001 C CNN
 F 3 "~" H 1200 2050 50  0001 C CNN
 	1    1200 2050
 	1    0    0    -1  
@@ -168,7 +167,7 @@ U 1 1 5D22258E
 P 850 2050
 F 0 "C1" H 965 2096 50  0000 L CNN
 F 1 "50" H 965 2005 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_Tantal_D5.0mm_P5.00mm" H 850 2050 50  0001 C CNN
+F 2 "trimmer-caps:TZ03-F" H 850 2050 50  0001 C CNN
 F 3 "~" H 850 2050 50  0001 C CNN
 	1    850  2050
 	1    0    0    -1  
@@ -466,9 +465,6 @@ Wire Wire Line
 	1650 1750 1950 1750
 Wire Wire Line
 	1200 2300 1650 2300
-Wire Wire Line
-	1650 2300 1950 2300
-Connection ~ 1650 2300
 $Comp
 L power:VCC #PWR010
 U 1 1 5D24C855
