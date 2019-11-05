@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Pixie mod"
-Date "2019-07-07"
-Rev "V01"
+Date "2019-11-05"
+Rev "V01a"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -134,7 +134,7 @@ L Device:C_Variable C2
 U 1 1 5D220906
 P 1200 2050
 F 0 "C2" H 1315 2096 50  0000 L CNN
-F 1 "50" H 1315 2005 50  0000 L CNN
+F 1 "40" H 1315 2005 50  0000 L CNN
 F 2 "trimmer-caps:TZ03-F" H 1200 2050 50  0001 C CNN
 F 3 "~" H 1200 2050 50  0001 C CNN
 	1    1200 2050
@@ -156,7 +156,7 @@ L Device:C_Variable C1
 U 1 1 5D22258E
 P 850 2050
 F 0 "C1" H 965 2096 50  0000 L CNN
-F 1 "50" H 965 2005 50  0000 L CNN
+F 1 "60" H 965 2005 50  0000 L CNN
 F 2 "trimmer-caps:TZ03-F" H 850 2050 50  0001 C CNN
 F 3 "~" H 850 2050 50  0001 C CNN
 	1    850  2050
@@ -514,7 +514,7 @@ $Comp
 L Device:CP C10
 U 1 1 5D25BF0B
 P 5500 4500
-F 0 "C10" V 5450 4400 50  0000 C CNN
+F 0 "C10" V 5450 4350 50  0000 C CNN
 F 1 "10u" V 5350 4500 50  0000 C CNN
 F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 5538 4350 50  0001 C CNN
 F 3 "~" H 5500 4500 50  0001 C CNN
@@ -604,7 +604,7 @@ F 3 "~" H 5000 3550 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	5000 3700 5000 3850
+	5000 3700 5000 3750
 $Comp
 L power:VCC #PWR016
 U 1 1 5D285496
@@ -837,11 +837,11 @@ DIT
 Wire Wire Line
 	10200 1750 10050 1750
 $Comp
-L Transistor_BJT:2N3904 Q4
+L Device:Q_NPN_EBC Q4
 U 1 1 5DBD6751
 P 8000 1650
 F 0 "Q4" H 8191 1696 50  0000 L CNN
-F 1 "2N3904" H 8191 1605 50  0000 L CNN
+F 1 "2N2222" H 8191 1605 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8200 1575 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 8000 1650 50  0001 L CNN
 	1    8000 1650
@@ -919,11 +919,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm386.pdf" H 5300 4350 50  0001 C CNN
 	1    5100 4150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5100 3750 5100 3850
-Wire Wire Line
-	5350 3750 5100 3750
-Text GLabel 5350 3750 2    50   Input ~ 0
+Text GLabel 4000 4200 3    50   Input ~ 0
 Sidetone
 $Comp
 L Connector_Generic:Conn_01x02 J1
@@ -1274,4 +1270,53 @@ F 3 "http://www.fairchildsemi.com/ds/PN/PN2222A.pdf" H 3550 2300 50  0001 L CNN
 	1    3550 2300
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:CP C17
+U 1 1 5DC24ED5
+P 5500 3750
+F 0 "C17" V 5755 3750 50  0000 C CNN
+F 1 "CP" V 5664 3750 50  0000 C CNN
+F 2 "" H 5538 3600 50  0001 C CNN
+F 3 "~" H 5500 3750 50  0001 C CNN
+	1    5500 3750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR031
+U 1 1 5DC2667A
+P 5750 3850
+F 0 "#PWR031" H 5750 3600 50  0001 C CNN
+F 1 "GND" H 5755 3677 50  0000 C CNN
+F 2 "" H 5750 3850 50  0001 C CNN
+F 3 "" H 5750 3850 50  0001 C CNN
+	1    5750 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3750 5000 3750
+Connection ~ 5000 3750
+Wire Wire Line
+	5000 3750 5000 3850
+Wire Wire Line
+	5650 3750 5750 3750
+Wire Wire Line
+	5750 3750 5750 3850
+$Comp
+L Device:C C16
+U 1 1 5DC336D2
+P 4300 4050
+F 0 "C16" V 4048 4050 50  0000 C CNN
+F 1 "20n" V 4139 4050 50  0000 C CNN
+F 2 "" H 4338 3900 50  0001 C CNN
+F 3 "~" H 4300 4050 50  0001 C CNN
+	1    4300 4050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 4200 4000 4050
+Wire Wire Line
+	4000 4050 4150 4050
+Wire Wire Line
+	4450 4050 4550 4050
+Connection ~ 4550 4050
 $EndSCHEMATC
