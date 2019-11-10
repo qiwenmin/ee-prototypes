@@ -1,3 +1,3 @@
 (fp_lib_table
-  (lib (name trimmer-caps)(type KiCad)(uri ${KIPRJMOD}/trimmer-caps.pretty)(options "")(descr ""))
+  (lib (name bg1ren)(type KiCad)(uri ${KIPRJMOD}/libs/bg1ren.pretty)(options "")(descr ""))
 )
