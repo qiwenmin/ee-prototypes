@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Pixie mod"
-Date "2019-11-07"
+Date "2019-11-18"
 Rev "V02"
 Comp ""
 Comment1 ""
@@ -1345,7 +1345,7 @@ $EndComp
 Text Label 10200 6000 0    50   ~ 0
 V+
 Text Notes 750  7550 0    50   ~ 0
-U2 - The firmware should be 3p7n.\nR5 - Shorting it may reduce the BCI.\nR13 - From 1K to 10K - to adjust the volume of the sidetone.\nR15 - Optional. For decreasing the sidetone volume when using an external audio amplifier.\nC8 - Changing to 22n or 10n may reduce clicks/pops.\n
+U2 - The firmware should be 3p7n.\nR2 - 220, 470 or 1K. A smaller resistor brings more tx power.\nR5 - Shorting it may reduce the BCI.\nR13 - From 1K to 10K - to adjust the volume of the sidetone.\nR15 - Optional. For decreasing the sidetone volume with an external audio amplifier.\nC8 - Changing to 22n or 10n may reduce clicks/pops.\n
 $Comp
 L Device:R R15
 U 1 1 5DC579B7
@@ -1372,4 +1372,6 @@ F 3 "" H 7950 3750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7950 3750 7950 3650
+Text Notes 5400 7550 0    50   ~ 0
+20m band:\nY1 - 14.x MHz\nL3, L4 - 470uH\nC13, C15 - 220pF\nC14 - 470pF\nC16 - omitted
 $EndSCHEMATC
